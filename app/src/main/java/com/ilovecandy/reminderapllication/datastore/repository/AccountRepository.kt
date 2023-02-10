@@ -8,5 +8,8 @@ class AccountRepository(
 ){
     fun getPassword(username: String): String = accountDao.getPassword(username)
 
-    suspend fun addAccount(account: Account) = accountDao.insert(account)
+    suspend fun addAccount(account: Account)
+    {
+        accountDao.insert(account)
+    }
 }

@@ -22,7 +22,7 @@ import kotlinx.coroutines.launch
 fun SignUpData(
     modifier: Modifier,
     navController: NavController,
-    viewModel: SignUpViewModel = viewModel(),
+    //viewModel: SignUpViewModel = viewModel(),
 ){
     val coroutineScope = rememberCoroutineScope()
     val username = remember { mutableStateOf("") }
@@ -73,14 +73,14 @@ fun SignUpData(
 
         Button(
             onClick = {
-                coroutineScope.launch {
-                    viewModel.saveAccount(
-                        com.ilovecandy.reminderapllication.datastore.entity.Account(
-                            username = username.value,
-                            password = password.value,
-                        )
-                    )
-                }
+//                coroutineScope.launch {
+//                    viewModel.saveAccount(
+//                        com.ilovecandy.reminderapllication.datastore.entity.Account(
+//                            username = username.value,
+//                            password = password.value,
+//                        )
+//                    )
+//                }
                 navController.navigate("home")
                       },
             modifier = Modifier.height(50.dp).fillMaxWidth(),
